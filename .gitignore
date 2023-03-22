@@ -1,0 +1,13 @@
+# ignore everything
+/*
+/*/
+
+# ... but these:
+!/RULES/
+!/Rulesets/
+!/proxy/
+
+!/.gitignore
+!/LICENSE
+!/README.md
+!robots.txt
