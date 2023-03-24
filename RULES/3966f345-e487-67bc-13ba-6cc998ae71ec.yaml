@@ -461,7 +461,7 @@ proxy-groups:
  proxy-providers:
    theirs1:
      type: http
-     url: https://pages.github.com/skywolf-dl/pconf/proxy/theirs1.yaml
+     url: https://skywolf-dl.github.io/pconf/proxy/theirs1.yaml
      interval: 3600
      path: ./theirs1.yaml
      health-check:
