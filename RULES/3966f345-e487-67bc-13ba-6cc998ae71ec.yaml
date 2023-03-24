@@ -12,7 +12,7 @@
 mixed-port: 7890
 
 # Linux 和 macOS 的 redir 透明代理端口 (重定向 TCP 和 TProxy UDP 流量)
-redir-port: 7892
+#redir-port: 7892
 
 # Linux 的透明代理端口（适用于 TProxy TCP 和 TProxy UDP 流量)
 # tproxy-port: 7893
@@ -428,7 +428,7 @@ proxy-groups:
   # select 用来允许用户手动选择 代理服务器 或 服务器组
   # 您也可以使用 RESTful API 去切换服务器，这种方式推荐在 GUI 中使用
   - name: auto
-    type: auto
+    type: url-test
     use:
       - theirs1
 
@@ -458,16 +458,16 @@ proxy-groups:
   #     - Proxy
   #     - DIRECT
 
- proxy-providers:
-   theirs1:
-     type: http
-     url: https://skywolf-dl.github.io/pconf/proxy/theirs1.yaml
-     interval: 3600
-     path: ./theirs1.yaml
-     health-check:
-       enable: true
-       interval: 300
-       url: http://www.gstatic.com/generate_204
+proxy-providers:
+  theirs1:
+    type: http
+    url: https://skywolf-dl.github.io/pconf/proxy/theirs1.yaml
+    interval: 3600
+    path: ./theirs1.yaml
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
 # proxy-providers:
 #   provider1:
 #     type: http
