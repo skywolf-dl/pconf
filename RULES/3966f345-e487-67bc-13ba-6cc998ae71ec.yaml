@@ -431,6 +431,10 @@ proxy-groups:
     type: url-test
     use:
       - theirs1
+    proxies:
+      - DIRECT
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
 
   - name: PROXY
     type: select
