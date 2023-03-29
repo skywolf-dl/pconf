@@ -434,10 +434,17 @@ proxy-groups:
     proxies:
       - DIRECT
     url: 'http://www.gstatic.com/generate_204'
-    interval: 300
+    lazy: false
+    interval: 600
+    health-check:
+      enable: true
+      url: 'http://www.gstatic.com/generate_204'
+      interval: 300
 
   - name: PROXY
     type: select
+    use:
+      - theirs1
     proxies:
       - Auto
       - DIRECT
