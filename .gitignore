@@ -8,7 +8,7 @@
 !/proxy/
 
 !/.gitignore
-!/.nojekyll
+!/_config.yml
 !/LICENSE
 !/README.md
 !robots.txt
