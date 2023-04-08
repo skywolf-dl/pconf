@@ -430,9 +430,7 @@ proxy-groups:
   - name: Auto
     type: url-test
     use:
-      - theirs1
-    proxies:
-      - DIRECT
+      - socks
     url: 'http://www.gstatic.com/generate_204'
     lazy: false
     interval: 600
@@ -472,9 +470,18 @@ proxy-groups:
 proxy-providers:
   theirs1:
     type: http
-    url: http://skywolf-dl.github.io/pconf/proxy/theirs1.yaml
+    url: https://skywolf-dl.github.io/pconf/proxy/theirs1.yaml
     interval: 3600
     path: ./theirs1.yaml
+    health-check:
+      enable: true
+      interval: 300
+      url: http://www.gstatic.com/generate_204
+  socks:
+    type: http
+    url: https://skywolf-dl.github.io/pconf/proxy/socks.yaml
+    interval: 3600
+    path: ./socks.yaml
     health-check:
       enable: true
       interval: 300
