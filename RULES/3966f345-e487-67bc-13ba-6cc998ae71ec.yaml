@@ -442,7 +442,7 @@ proxy-groups:
   - name: PROXY
     type: select
     use:
-      - theirs1
+      - socks
     proxies:
       - Auto
       - DIRECT
