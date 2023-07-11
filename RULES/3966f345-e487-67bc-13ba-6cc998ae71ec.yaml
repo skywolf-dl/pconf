@@ -479,7 +479,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   socks:
     type: http
-    url: https://skywolf-dl.github.io/pconf/proxy/socks.yaml
+    url: https://raw.githubusercontent.com/skywolf-dl/pconf/main/proxy/socks.yaml
     interval: 3600
     path: ./socks.yaml
     health-check:
